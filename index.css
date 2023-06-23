@@ -28,8 +28,45 @@ body {
 }
 
 .checkbox__wrapper {
-    display: flex;
-    position: relative;
-    margin: 10px;
-    margin-left: 0;
+  display: flex;
+  position: relative;
+  margin: 10px;
+  margin-left: 0;
+}
+
+.checkbox__label {
+  color: white;
+  margin: 0 30px;
+}
+
+.checkbox__wrapper input[type="checkbox"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  appearance: none;
+  z-index: 999999;
+  cursor: pointer;
+}
+
+.inner__wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 8px 45px;
+}
+
+.inner__wrapper p {
+  transform: translateX(8px);
+  transition: all 0.4s;
+}
+
+.inner__wrapper::before,
+.inner__wrapper::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.4s;
 }
