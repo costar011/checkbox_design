@@ -103,3 +103,11 @@ body {
   width: 40px;
   background: #576cbc;
 }
+
+.checkbox__wrapper input[type="checkbox"]:checked ~ .inner__wrapper::after {
+width: calc(100% - 45px);
+}
+
+.checkbox__wrapper input[type="checkbox"]:checked ~ .inner__wrapper p {
+ transform: translateX(15px);
+}
